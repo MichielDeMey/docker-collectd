@@ -1,5 +1,5 @@
 #!/bin/bash
-./configure.sh < collectd.conf.tpl > /etc/collectd/collectd.conf
+./configure.sh < collectd.conf > /etc/collectd/collectd.conf
 
 for f in /etc/collectd/collectd.d/*.conf
 do

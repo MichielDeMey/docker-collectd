@@ -13,6 +13,6 @@ ADD collectd.d /etc/collectd/collectd.d
 # Generate the collectd configuration
 ADD init.sh .
 ADD configure.sh .
-ADD collectd.conf.tpl .
+ADD collectd.conf .
 
 CMD ["/bin/bash", "-c", "./init.sh"]
