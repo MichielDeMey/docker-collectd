@@ -15,5 +15,9 @@ Since the hostname for a Docker container is automatically generated, it's recom
 
 # Example
 ```
-docker run -h "My Host" -e "COLLECTD_PORT=12345" astromo/collectd-influxdb
+docker run \
+  -h $(uname -n) \
+  -e "COLLECTD_HOST=192.168.99.100" \
+  -e "COLLECTD_PORT=12345" \
+  michieldemey/collectd
 ```
