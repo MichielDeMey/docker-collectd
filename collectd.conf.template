@@ -13,6 +13,7 @@ LoadPlugin processes
 LoadPlugin users
 LoadPlugin swap
 LoadPlugin network
+LoadPlugin uptime
 
 # Write logs to STDOUT so we can view them using Docker logs
 <Plugin logfile>
