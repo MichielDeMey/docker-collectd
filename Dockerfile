@@ -7,9 +7,12 @@ RUN apk add bash
 RUN apk add collectd
 RUN apk add collectd-network
 
+# Add collectd.d directory for plugin configuration
+ADD collectd.d /etc/collectd/collectd.d
+
 # Generate the collectd configuration
 ADD init.sh .
 ADD configure.sh .
-ADD collectd.conf.template .
+ADD collectd.conf.tpl .
 
 CMD ["/bin/bash", "-c", "./init.sh"]
